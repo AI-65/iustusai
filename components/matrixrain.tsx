@@ -19,8 +19,7 @@ const MatrixRain = () => {
       return `§ ${sectionNumber} ${abbreviation}`;
     };
 
-    const fontSize = 8;
-    const horizontalSpacing = 2; // Increase horizontal spacing by a factor of 2
+    const fontSize = 9;
     const spacing = 2;
     const columns = canvas.width / (fontSize + spacing);
 
