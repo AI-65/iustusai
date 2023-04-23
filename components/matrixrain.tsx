@@ -13,11 +13,10 @@ const MatrixRain = () => {
     const context = canvas.getContext('2d');
 
     const codeAbbreviations = ['BGB', 'StGB', 'ZPO', 'HGB', 'AktG', 'SGB II', 'StVO', 'StPO'];
-    const sectionNumbers = Array.from({ length: 300 }, (_, i) => i + 1);
 
     const randomParagraph = () => {
       const abbreviation = codeAbbreviations[Math.floor(Math.random() * codeAbbreviations.length)];
-      const sectionNumber = sectionNumbers[Math.floor(Math.random() * sectionNumbers.length)];
+      const sectionNumber = Math.floor(Math.random() * 300) + 1;
       return `§ ${sectionNumber} ${abbreviation}`;
     };
 
@@ -27,7 +26,7 @@ const MatrixRain = () => {
     const rainDrops = [];
 
     for (let x = 0; x < columns; x++) {
-      rainDrops[x] = 1;
+      rainDrops[x] = Math.random() * 20;
     }
 
     const draw = () => {

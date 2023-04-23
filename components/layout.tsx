@@ -10,13 +10,10 @@ export default function Layout({ children }: LayoutProps) {
     <>
       <MatrixRain />
       <div className="mx-auto flex flex-col space-y-4 relative z-10">
-        <header className="container sticky top-0 z-40 bg-white">
-          <div className="h-16 border-b border-b-slate-200 py-4">
-            <nav className="ml-4 pl-6">
-              <a href="#" className="hover:text-slate-600 cursor-pointer">
-                Home
-              </a>
-            </nav>
+        <header className="container sticky top-0 z-40 bg-black bg-opacity-50">
+          <div className="h-16 border-b border-b-slate-200 py-4 flex flex-col justify-center items-center">
+            <h1 className="text-green-400 font-mono text-3xl">LegalBot</h1>
+            <h2 className="text-green-400 font-mono text-sm">Powered by ChatGPT</h2>
           </div>
         </header>
         <div>
