@@ -25,7 +25,7 @@ export default function Home() {
   }>({
     messages: [
       {
-        message: 'Hallo, möchten Sie etwas über die Rechtslage erfahren?',
+        message: 'Hallo, welchen Schmerzensgeldfall haben sie?',
         type: 'apiMessage',
       },
     ],
@@ -221,7 +221,7 @@ export default function Home() {
                     placeholder={
                       loading
                         ? 'Denke nach...'
-                        : 'Was ist die Definition einer "Körperverletzung"?'
+                        : 'Wie hoch ist der Betrag bei...?'
                     }
                     value={query}
                     onChange={(e) => setQuery(e.target.value)}

@@ -5,18 +5,18 @@ interface LayoutProps {
   children?: React.ReactNode;
 }
 
-export default function Layout({ children }: LayoutProps) {
+const Layout: React.FC<LayoutProps> = ({ children }) => {
   return (
     <>
       <MatrixRain />
       <div className="mx-auto flex flex-col space-y-4 relative z-10 min-h-screen">
-        <header className="w-full sticky top-0 z-40 bg-black bg-opacity-50">
-          <div className="container h-16 border-b border-b-slate-200 py-4 flex flex-col justify-center items-center">
-            <h1 className="text-green-400 font-mono text-3xl">IustusAI</h1>
-            <h2 className="text-green-400 font-mono text-sm">Powered by ChatGPT</h2>
-          </div>
-        </header>
-        <div className="flex-grow">
+        <div className="sticky top-0 z-40 bg-black bg-opacity-50">
+          <header className="w-full">
+            <div className="container h-16 border-b border-b-slate-200 py-4 flex flex-col justify-center items-center">
+              <h1 className="text-green-400 font-mono text-3xl">IustusAI</h1>
+              <h2 className="text-green-400 font-mono text-sm">Powered by ChatGPT</h2>
+            </div>
+          </header>
           <main className="flex w-full flex-1 flex-col overflow-hidden">
             {children}
           </main>
@@ -37,4 +37,6 @@ export default function Layout({ children }: LayoutProps) {
       </div>
     </>
   );
-}
+};
+
+export default Layout;
