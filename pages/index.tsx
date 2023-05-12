@@ -31,7 +31,7 @@ export default function Home() {
     ],
     history: [],
   });
-
+  
   const { messages, history } = messageState;
 
   const messageListRef = useRef<HTMLDivElement>(null);
